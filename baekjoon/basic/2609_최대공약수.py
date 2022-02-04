@@ -15,3 +15,4 @@ print(math.lcm(num1, num2))
 #
 # def lcm(a, b):
 #     return a * b // gcd(a, b)
+
