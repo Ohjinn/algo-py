@@ -8,7 +8,7 @@ def minimumArray(nums):
     while left <= right:
         if nums[mid] > nums[left]:
             right = mid - 1
-        elif nums[mid]
+        # elif nums[mid]
 
 
 
