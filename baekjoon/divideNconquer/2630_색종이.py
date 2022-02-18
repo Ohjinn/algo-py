@@ -5,6 +5,7 @@ n = int(sys.stdin.readline())
 quad = [list(map(int, sys.stdin.readline().strip())) for _ in range(n)]
 blue, white = 0, 0
 
+
 def divide(x, y, n):
     global white, blue
     start = quad[x][y]
@@ -19,6 +20,7 @@ def divide(x, y, n):
         white += 1
     else:
         blue += 1
+
 
 divide(0, 0, n)
 print(white)
