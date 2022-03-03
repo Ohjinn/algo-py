@@ -1,6 +1,7 @@
 import sys
 from collections import deque
 
+
 input = sys.stdin.readline
 M, N, H = map(int, input().split())
 basket = [[list(map(int, input().split())) for i in range(N)] for j in range(H)]
@@ -45,10 +46,10 @@ for i in basket:
             result = max(result, k)
 
 
-
 if check == 0:
     print(-1)
 elif result == 1:
     print(0)
 else:
     print(result - 1)
+
