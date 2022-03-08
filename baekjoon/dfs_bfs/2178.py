@@ -7,8 +7,6 @@ for _ in range(X):
     graph.append(list(map(int, input())))
 
 
-
-
 def bfs(x, y):
 
     queue = deque()
