@@ -33,7 +33,6 @@ def bfs(x, y):
                 count += 1
 
 
-
 for _ in range(k):
     x1, y1, x2, y2 = map(int, input().split())
     for i in range(y1, y2):
