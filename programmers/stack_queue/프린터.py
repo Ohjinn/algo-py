@@ -31,7 +31,7 @@ def solution(priorities, location):
                     break
 
             if check[location] == 1:
-                break
+                return answer
         if j == length - 1:
             j = 0
 
