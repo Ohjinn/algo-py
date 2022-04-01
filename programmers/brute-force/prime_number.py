@@ -42,6 +42,7 @@ def generate(numbers, chosen, used):
             generate(numbers, chosen, used)
             used[i] = 0
             chosen.pop()
+#             리스트로는 중복 예를 들어 [1, 0, 1]이 두개라면 판별하지 못한다.
 
 
 solution('011')
