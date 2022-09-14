@@ -27,6 +27,7 @@ def solution_with_permutation(k, dungeons):
     n = len(dungeons)
 
     for permutation in list(permutations(range(0, n), n)):
+        print(permutation)
         cnt = 0
         temp_k = k
         for i in permutation:
