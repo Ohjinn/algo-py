@@ -24,6 +24,7 @@ def solution(n, wires):
         graph[i].append(j)
         graph[j].append(i)
 
+    # print(graph)
     for start, unvisited in wires:
         visited = [False] * (n + 1)
         visited[unvisited] = True
