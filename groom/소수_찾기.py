@@ -4,19 +4,19 @@ def prime_list():
 
     m = int(n ** 0.5)
     for i in range(2, m + 1):
-        if list[i] == True:
-            for j in range(i + 1, n + 1, i):
+        if list[i]:
+            for j in range(i + i, n + 1, i):
                 list[j] = False
 
-    return [i for i in range(2, n + 1) if list[i] == True]
+    return [i for i in range(2, n + 1) if list[i]]
 
-print(prime_list())
+
+primes = prime_list()
 input()
 user_input = input().split()
 
 sum = 0
 for i in user_input:
-    if int(i) in prime_list():
-        print(int(i))
+    if int(i) in primes:
         sum += int(i)
 print(sum)
