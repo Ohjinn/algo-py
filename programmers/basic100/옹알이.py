@@ -16,10 +16,17 @@ from itertools import permutations
 #     return answer
 #
 #
-# print(solution(['ayaye', 'uuuma', 'ye', 'yemawoo', 'ayaa']))
 
 def solution(babbling):
     answer = 0
     possible_answers = ['aya', 'ye', 'woo', 'ma']
-    word = []
-    for i in range(1, len(possible_answers) + 1)
+    for word in babbling:
+        for possible_answer in possible_answers:
+            word = word.replace(possible_answer, ' ', 1)
+
+        if len(word.replace(' ', '')) == 0:
+            answer += 1
+    return answer
+
+
+print(solution(['ayaye', 'uuuma', 'ye', 'yemawoo', 'ayaa']))
