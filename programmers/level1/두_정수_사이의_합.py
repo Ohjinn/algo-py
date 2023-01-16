@@ -4,6 +4,6 @@ def solution(a, b):
         answer += i
     return answer
 
+
 def solution2(a, b):
     return (abs(a - b) + 1) + (a + b) // 2
-
