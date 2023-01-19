@@ -1,6 +1,6 @@
 def solution(s):
-    sorted_word = sorted(s, key=lambda x: (str.upper, reversor))
-    sorted_word.reverse()
+    sorted_word = sorted(s, key=reversor)
+    # sorted_word.reverse()
     return ''.join(sorted_word)
 
 
@@ -15,3 +15,4 @@ class reversor:
            return other.obj < self.obj
 
 print(solution('Zbcdefg'))
+print(solution('zjieoADWQ'))
