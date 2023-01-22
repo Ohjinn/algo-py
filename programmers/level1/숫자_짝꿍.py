@@ -1,18 +1,28 @@
 def solution(X, Y):
-    result_arr = []
-    for i in X:
-        if i in Y:
-            Y = Y.replace(i, '', 1)
-            result_arr.append(i)
-    result_arr.sort(reverse = True)
-    answer = ''.join(result_arr)
+    answer = ''
+    x_dict = {n:0 for n in range(10)}
+    y_dict = {n:0 for n in range(10)}
 
-    if len(answer) != 0 and int(answer) != 0:
-        return answer
+    for x in X:
+        x_dict[int(x)] += 1
+
+    for y in Y:
+        y_dict[int(y)] += 1
+
+    for i in range(9, -1, -1):
+        answer += str(i) * min(x_dict[i], y_dict[i])
+        # x = x_dict[str(i)]
+        # y = y_dict[str(i)]
+        # if x > 0 and y > 0:
+        #     for _ in range(min(x, y)):
+        #         if answer != '0':
+        #             answer += str(i)
+    if answer == '':
+        answer = '-1'
     elif int(answer) == 0:
-        return '0'
-    else:
-        return '-1'
+        answer = '0'
+    return answer
 
 
-print(solution("100", "2345"))
+
+print(solution("100", "203045"))
