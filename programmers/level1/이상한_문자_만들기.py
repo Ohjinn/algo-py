@@ -1,11 +1,15 @@
 def solution(s):
-    answer = ''
-    for idx, char in enumerate(s, 1):
-        if idx % 2 == 1:
-            answer += char.upper()
-        else:
-            answer += char.lower()
-    return answer
+    answer = []
+    s = s.split(' ')
+    for i in s:
+        result = ''
+        for idx, char in enumerate(i, 1):
+            if idx % 2 == 1:
+                result += char.upper()
+            else:
+                result += char.lower()
+        answer.append(result)
+    return ' '.join(answer)
 
 
 print(solution("try hello world"))
