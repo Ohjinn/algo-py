@@ -47,9 +47,10 @@ for i in basket:
 
 
 if check == 0:
-    print(-1)
+    result = -1
 elif result == 1:
-    print(0)
+    result = 0
 else:
-    print(result - 1)
+    result -= 1
 
+print(result)
