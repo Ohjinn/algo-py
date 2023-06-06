@@ -23,14 +23,14 @@ def bfs():
         z, x, y = queue.popleft()
 
         for i in range(6):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            nz = z + dz[i]
+            near_x = x + dx[i]
+            near_y = y + dy[i]
+            near_z = z + dz[i]
 
-            if 0 <= nx < N and 0 <= ny < M and 0 <= nz < H:
-                if basket[nz][nx][ny] == 0:
-                    basket[nz][nx][ny] = basket[z][x][y] + 1
-                    queue.append([nz, nx, ny])
+            if 0 <= near_x < N and 0 <= near_y < M and 0 <= near_z < H:
+                if basket[near_z][near_x][near_y] == 0:
+                    basket[near_z][near_x][near_y] = basket[z][x][y] + 1
+                    queue.append([near_z, near_x, near_y])
 
 bfs()
 print(basket)
