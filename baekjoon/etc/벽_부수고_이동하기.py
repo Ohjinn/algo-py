@@ -16,6 +16,6 @@ def bfs():
 
 
 max_location = 100001
-n, k = map(int, input().split())
+n, ㅡ = map(int, input().split())
 visited = [0] * max_location
 print(bfs())
