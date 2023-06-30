@@ -19,3 +19,9 @@ def solution(dartResult):
             stack.append(2 * num)
 
     return sum(stack)
+
+print(solution('1S*2T*3S'))
+
+tack = ['1', '2']
+if len(tack):
+    print(len(tack))
