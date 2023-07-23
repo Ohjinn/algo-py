@@ -1,3 +1,5 @@
+package 자바기초;
+
 public class 신규_아이디_추천 {
     public String solution(String new_id) {
         new_id = new_id.toLowerCase();

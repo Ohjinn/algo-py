@@ -1,3 +1,5 @@
+package 자바기초;
+
 public class 둘만의_암호 {
     private String solution(String s, String skip, int index) {
         String alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
