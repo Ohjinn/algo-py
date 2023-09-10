@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+# 신고 당한놈이 아니라 신고한놈이 전리품으로 메일을 가져감
+def solution(id_list, report, k):
+    answer = []
+    report_cnt_dict = {}
+
+    report = list(set(report))
+    for id in id_list:
+        report_cnt_dict[id] = 0
+
+    for a_report in report:
+        a_report = a_report.split(' ')
+        report_cnt_dict[a_report[1]] += 1
+    print(report_cnt_dict)
+    return answer
+
+
+print(solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"], 2))
+print(solution(["con", "ryan"], ["ryan con", "ryan con", "ryan con", "ryan con"], 3))
+=======
 def solution(id_list, report, k):
     answer = [0 for i in id_list]
     # id_list의 이름별 index를 저장
@@ -23,3 +43,4 @@ def solution(id_list, report, k):
                     answer[indexer[key]] += 1
 
     return answer
+>>>>>>> 57e10baa77ebdc5c5b67e534385d5db93da760b5
