@@ -15,7 +15,6 @@ def dijkstra(dist, adj):
 def solution(N, road, K):
     shortest_way = [float('inf')] * (N + 1)
     shortest_way[1] = 0
-    print(shortest_way)
 
     adj = [[] for _ in range(N + 1)]
 
@@ -23,5 +22,9 @@ def solution(N, road, K):
         adj[r[0]].append([r[2], r[1]])
         adj[r[1]].append([r[2], r[0]])
 
+    print(adj)
     dijkstra(shortest_way, adj)
     return len([i for i in shortest_way if i <= K])
+
+
+solution(5,	[[1,2,1],[2,3,3],[5,2,2],[1,4,2],[5,3,1],[5,4,2]], 3)
